@@ -1,4 +1,14 @@
-document.querySelector('.startBtn').addEventListener("click", function(){
+
+function copy(){
+    
+    document.querySelector('.copyBtn').addEventListener('click', function(){
+        textDiv.select();
+        document.execCommand('copy');
+        new ClipboardJS('.btn');
+    })
+};
+
+function code(){
     var str = document.querySelector('.input').value;
     var letters = [];
     letters = str.split("");
@@ -173,11 +183,24 @@ document.querySelector('.startBtn').addEventListener("click", function(){
     }
     var textDiv = document.querySelector('.readyText');
     textDiv.value = readyStr +'///';
-    document.querySelector('.copyBtn').addEventListener('click', function(){
-        textDiv.select();
-        document.execCommand('copy');
-        new ClipboardJS('.btn');
-    })
-    
+}
+var checked = true;
+
+document.querySelector('.code').addEventListener('click', function(){
+    checked = true;
+})
+document.querySelector('.translate').addEventListener('click', function(){
+    checked = false;
+})
+document.querySelector('.startBtn').addEventListener("click", function(){
+   
+
+    if(checked = true){
+        code();
+    }
+    else if(checked = false){
+        translate();
+    }
+    copy();
 
 })
