@@ -1,14 +1,4 @@
-
-function copy(){
-    
-    document.querySelector('.copyBtn').addEventListener('click', function(){
-        textDiv.select();
-        document.execCommand('copy');
-        new ClipboardJS('.btn');
-    })
-};
-
-function code(){
+document.querySelector('.startBtn').addEventListener("click", function(){
     var str = document.querySelector('.input').value;
     var letters = [];
     letters = str.split("");
@@ -144,7 +134,7 @@ function code(){
             case 'Y':
                 readyStr = readyStr + '/-.--'
             break;
-            case ' ':
+            case '  ':
                 readyStr = readyStr + '/'
             break;
 
@@ -183,24 +173,11 @@ function code(){
     }
     var textDiv = document.querySelector('.readyText');
     textDiv.value = readyStr +'///';
-}
-var checked = true;
-
-document.querySelector('.code').addEventListener('click', function(){
-    checked = true;
-})
-document.querySelector('.translate').addEventListener('click', function(){
-    checked = false;
-})
-document.querySelector('.startBtn').addEventListener("click", function(){
-   
-
-    if(checked = true){
-        code();
-    }
-    else if(checked = false){
-        translate();
-    }
-    copy();
+    document.querySelector('.copyBtn').addEventListener('click', function(){
+        textDiv.select();
+        document.execCommand('copy');
+        new ClipboardJS('.btn');
+    })
+    
 
 })

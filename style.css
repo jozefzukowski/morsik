@@ -53,9 +53,30 @@ body{
 
 }
 .btn:hover{
-    background: #C50000;
-    color: white;
+    box-shadow: 30px 30px 30px rgba(206, 21, 21, 0.12);
 }
+.smallBtn{
+    font-size: 2vh;
+    padding: 10px 50px;
+    background: none;
+    border-radius: 50px;
+    border: 2px solid #C50000;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: #C50000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: 0.5s;
+    margin: 50px 0;
+}
+.smallBtn:hover{
+    box-shadow: 0px 30px 30px rgba(206, 21, 21, 0.12);
+}
+.smallBtn:focus{
+    color: white;
+    background-color: #C50000;
+    }
+
 .readyText{
     background: #FFFFFF;
     box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.12);
