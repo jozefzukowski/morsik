@@ -173,6 +173,11 @@ document.querySelector('.startBtn').addEventListener("click", function(){
     }
     var textDiv = document.querySelector('.readyText');
     textDiv.value = readyStr +'///';
-    new ClipboardJS('.btn');
+    document.querySelector('.copyBtn').addEventListener('click', function(){
+        textDiv.select();
+        document.execCommand('copy');
+        new ClipboardJS('.btn');
+    })
+    
 
 })
