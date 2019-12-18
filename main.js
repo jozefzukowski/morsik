@@ -134,7 +134,7 @@ document.querySelector('.startBtn').addEventListener("click", function(){
             case 'Y':
                 readyStr = readyStr + '/-.--'
             break;
-            case '':
+            case ' ':
                 readyStr = readyStr + '/'
             break;
 
