@@ -1,33 +1,53 @@
-document.querySelector('.startBtn').addEventListener("click", function(){
+let clicked = 0;
+document.querySelector('#translate').addEventListener('click', function(){
+    document.querySelector('.startBtn').addEventListener('click', function(){
+        alert('hefoshaofd')
+    })
+})
+document.querySelector('#code').addEventListener('click', function(){
+    document.querySelector('.startBtn').addEventListener('click', function(){
+        alert('hefoshaofd')
+    })
+})
+/* 
+document.querySelector('.startBtn').addEventListener('click', function(){
+
+    if(clicked == 1){
+        alert('helofdohsafdd');
+    }
+    else{
+        alert('helofdohsafdd');
+    }
+}
+ */
+
+
+
+document.querySelector('#code').addEventListener("click", function(){
     var str = document.querySelector('.input').value;
-    var letters = [];
-    letters = str.split("");
+    var letters = str.split("");
     var length = letters.length;
     var readyStr = '//'
 
     for(i = 0; i <= length; i++){
 
         switch(letters[i]){
-            /* Aa */
             case 'a':
             case 'ą':
             case 'A':
             case 'Ą':
                 readyStr = readyStr + '/.-'
             break;
-            /* bB */
             case 'b':
             case 'B':
                 readyStr = readyStr + '/-...'
             break;
-            /* Cc */
             case 'c':
             case 'ć':
             case 'Ć':
             case 'C':
                 readyStr = readyStr + '/-.-.'
             break;
-            /* dD */
             case 'd':
             case 'D':
                 readyStr = readyStr + '/-..'
@@ -174,8 +194,141 @@ document.querySelector('.startBtn').addEventListener("click", function(){
     var textDiv = document.querySelector('.readyText');
     textDiv.value = readyStr +'///';
     document.querySelector('.copyBtn').addEventListener('click', function(){
-        textDiv.select();
-        document.execCommand('copy');
+        
+        new ClipboardJS('.btn');
+    })
+    
+
+})
+
+document.querySelector('#translate').addEventListener("click", function(){
+    var str = document.querySelector('.input').value;
+    var letters = str.split("/");
+    var length = letters.length;
+    var readyStr = '';
+
+    for(i = 0; i <= length; i++){
+
+        switch(letters[i]){
+            case '.-':
+                readyStr = readyStr + 'a'
+            break;
+            case '-...':
+                readyStr = readyStr + 'b'
+            break;
+            case '-.-.':
+                readyStr = readyStr + 'c'
+            break;
+            case '-..':
+                readyStr = readyStr + 'd'
+            break;
+            case '.':
+                readyStr = readyStr + 'e'
+            break;
+            case '..-.':
+                readyStr = readyStr + 'f'
+            break;
+            case '--.':
+                readyStr = readyStr + 'g'
+            break;
+            case '....':
+                readyStr = readyStr + 'h'
+            break;
+            case '..':
+                readyStr = readyStr + 'i'
+            break;
+            case '.---':
+                readyStr = readyStr + 'j'
+            break;
+            case '-.-':
+                readyStr = readyStr + 'k'
+            break;
+            case '.-..':
+                readyStr = readyStr + 'l'
+            break;
+            case '--':
+                readyStr = readyStr + 'm'
+            break;
+            case '-.':
+                readyStr = readyStr + 'n'
+            break;
+            case '---':
+                readyStr = readyStr + 'o'
+            break;
+            case '.--.':
+                readyStr = readyStr + 'p'
+            break;
+            case '--.-':
+                readyStr = readyStr + 'q'
+            break;
+            case '.-.':
+                readyStr = readyStr + 'r'
+            break;
+            case '...':
+                readyStr = readyStr + 's'
+            break;
+            case '-':
+                readyStr = readyStr + 't'
+            break;
+            case '..-':
+                readyStr = readyStr + 'u'
+            break;
+            case '...-':
+                readyStr = readyStr + 'v'
+            break;
+            case '.--':
+                readyStr = readyStr + 'w'
+            break;
+            case '-..-':
+                readyStr = readyStr + 'x'
+            break;
+            case '--..':
+                readyStr = readyStr + 'z'
+            break;
+            case '-.--':
+                readyStr = readyStr + 'y'
+            break;
+            case ' ':
+                readyStr = readyStr + '  '
+            break;
+
+            case '.----':
+                readyStr = readyStr + '1'
+            break;
+            case '..---':
+                readyStr = readyStr + '2'
+            break;
+            case '...--':
+                readyStr = readyStr + '3'
+            break;
+            case '....-':
+                readyStr = readyStr + '4'
+            break;
+            case '.....':
+                readyStr = readyStr + '5'
+            break;
+            case '-....':
+                readyStr = readyStr + '6'
+            break;
+            case '--...':
+                readyStr = readyStr + '7'
+            break;
+            case '---..':
+                readyStr = readyStr + '8'
+            break;
+            case '----.':
+                readyStr = readyStr + '9'
+            break;
+            case '-----':
+                readyStr = readyStr + '0'
+            break;
+        }
+
+    }
+    var textDiv = document.querySelector('.readyText');
+    textDiv.value = readyStr +'///';
+    document.querySelector('.copyBtn').addEventListener('click', function(){
+        
         new ClipboardJS('.btn');
     })
     
